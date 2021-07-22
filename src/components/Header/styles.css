@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #E85A4F;
+  }
+  
+  .navbar a {
+    color: white !important;
+    width: 40px;
+  }
+  
+  .navbar .navbar-search-bar {
+    margin: 0 auto;
+    width: 30vw;
+  }
+  
+  .navbar .navbar-login-btn {
+    background-color: #E98074;
+    border: 0;
+    font-weight: bolder;
+    font-size: 1.2em;
+    width: 135px;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  
+  .navbar .navbar-login-btn:hover {
+    background-color: #E98074;
+  }
+  
+  .navbar .navbar-login-btn .navbar-login-icon {
+    width: 25%;
+    margin-left: 10px;
+  }
+  
+  .navbar .navbar-shopping-cart-icon {
+    width: 100%;
+  }
+  
+  .navbar .navbar-accessibility-icon {
+    width: 100%;
+  }

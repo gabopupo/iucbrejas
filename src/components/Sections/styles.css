@@ -1,0 +1,68 @@
+.sections-bar {
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+}
+
+.sections-container {
+    margin: 0;
+    padding: 0;
+}
+
+.sections-content button {
+    width: 40%;
+    height: 100%;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 0;
+}
+
+.beer-btn {
+    border: 1px solid #DED500;
+
+    background-color: #DED500;
+    background-image: url('../../assets/beer.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wine-btn {
+    border: 1px solid #8A00BA;
+
+    background-color: #8A00BA;
+    background-image: url('../../assets/wine.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.distilled-btn {
+    border: 1px solid #7B2C00;
+
+    background-color: #7B2C00;
+    background-image: url('../../assets/distilled.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.address-data {
+    background-color: #E98074;
+    display: flex;
+    width: 90vw;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 5px 0;
+}
+
+.address-data-text {
+    text-align: right;
+    color: white;
+    font-size: 0.75em;
+}
+
+.address-pointer-icon {
+    width: 20px;
+    margin: 0 10px;
+}

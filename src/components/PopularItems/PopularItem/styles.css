@@ -1,0 +1,24 @@
+
+.popular-items .popular-item {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.popular-items .popular-item .popular-item-pic {
+    background-color: white;
+    border: 1px solid #E85A4F;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+.popular-items .popular-item .popular-item-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-items .popular-item .popular-item-desc {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-align: center;
+}
