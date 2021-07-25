@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sections from '../../components/Sections';
@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 function Product() {
   const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
   const backIcon = require('../../assets/back.svg').default;
+  const [qtd, changeQtd] = useState(0);
+
   return (
       <>
         <Header />
@@ -34,11 +36,11 @@ function Product() {
               <div className="product-qtd">
                 <p><strong>Quantidade: </strong></p>
                 <div className="product-qtd-selector">
-                  <Button>-</Button>
+                  <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
                   <Form>
-                    <FormControl type="text" value="0" className="mr-sm-2 product-qtd-selector-input" />
+                    <FormControl type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
                   </Form>
-                  <Button>+</Button>
+                  <Button onClick={() => changeQtd(qtd+1)}>+</Button>
                 </div>
               </div>
               <Button className="product-add-to-cart">

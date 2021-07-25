@@ -2,6 +2,7 @@
     background-color: #EAE7DC;
     color: #E98074;
     padding: 50px 100px;
+    min-height: 53vh;
 }
 
 .checkout-confirm-product {

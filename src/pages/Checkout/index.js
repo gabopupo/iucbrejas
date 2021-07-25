@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sections from '../../components/Sections';
 import GenericBeer from '../../assets/generic-beer.png';
-import { Button, CloseButton, Form, FormControl } from 'react-bootstrap';
+import { Button, Form, FormControl } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 
 import './styles.css';
@@ -15,10 +15,20 @@ function Checkout({ history }) {
     const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
     const checkoutIcon = require('../../assets/checkout.svg').default;
     const idCardIcon = require('../../assets/id-card.svg').default;
+
+    const [qtd,changeQtd] = useState(3);
+    const [itemOnCart, setItemOnCart] = useState(true);
+    useEffect(() => { 
+        if (qtd === 0)
+            if(window.confirm('Você deseja remover o produto \'Cerveja Genérica\' do carrinho?'))
+                setItemOnCart(false);
+            else changeQtd(1);
+    },[qtd]);
   return (
       <>
         <Header />
         <Sections />
+        {itemOnCart ? 
         <div className="checkout-page">
             <h2>Confirme a sua compra</h2>
             <div className="checkout-confirm-info">
@@ -38,11 +48,11 @@ function Checkout({ history }) {
                 <div className="checkout-confirm-qtd">
                     <h3>Quantidade</h3>
                     <div className="checkout-confirm-qtd-selector">
-                        <Button>-</Button>
+                        <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
                         <Form>
-                            <FormControl type="text" value="0" className="mr-sm-2 product-qtd-selector-input" />
+                            <FormControl type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
                         </Form>
-                        <Button>+</Button>
+                        <Button onClick={() => changeQtd(qtd+1)}>+</Button>
                     </div>
                 </div>
             </div>
@@ -69,6 +79,14 @@ function Checkout({ history }) {
                 <Button className="checkout-opt-primary"><img src={checkoutIcon} alt="Fazer pedido" /> Fazer pedido</Button>
             </div>
         </div>
+        :
+        <div className="checkout-page">
+            <h2>Seu carrinho está vazio!</h2>
+            <div className="checkout-opt-buttons">
+                <Button onClick={() => history.push('/')}><img src={shoppingCartIcon} alt="Voltar à loja" /> Voltar à loja</Button>
+            </div>
+        </div>
+        }
         <Footer />
       </>
   );
