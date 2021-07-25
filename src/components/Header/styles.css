@@ -5,6 +5,7 @@
   .navbar a {
     color: white !important;
     width: 40px;
+    text-decoration: none;
   }
   
   .navbar .navbar-search-bar {

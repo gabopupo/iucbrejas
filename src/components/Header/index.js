@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button, Form, FormControl } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
     return (
         <Navbar>
             <Container>
-            <Navbar.Brand href="#home">Brejas.com</Navbar.Brand>
+            <Navbar.Brand><Link to="/">Brejas.com</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="justify-content-end"  style={{ width: "100%" }}>
@@ -19,9 +19,11 @@ function Header() {
                     <FormControl type="text" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                 </Form>
                 <Button className="navbar-login-btn">
-                    Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
+                    <Link to="/login">
+                        Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
+                    </Link>
                 </Button>
-                <Nav.Link href="#home"><img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/></Nav.Link>
+                <Nav.Link href="/checkout"><img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/></Nav.Link>
                 <Nav.Link href="#home"><img className="navbar-accessibility-icon" src={accessibiltyIcon} alt='Acessibilidade'/></Nav.Link>
                 </Nav>
             </Navbar.Collapse>

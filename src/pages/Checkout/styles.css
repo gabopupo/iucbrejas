@@ -1,0 +1,15 @@
+.checkout-page {
+    background-color: #EAE7DC;
+    color: #E98074;
+    padding: 50px 100px;
+}
+
+.checkout-opt-buttons button {
+    background-color: #E98074;
+    border: 1px solid #E98074;
+}
+
+.checkout-opt-buttons .checkout-opt-primary {
+    background-color: #2A7C03;
+    border: 1px solid #2A7C03;
+}

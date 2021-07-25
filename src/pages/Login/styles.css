@@ -1,0 +1,55 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 110vh;
+    padding: 70px 0;
+    background-color: #EAE7DC;
+    color: #E98074;
+}
+
+.login-page a {
+    text-decoration: none;
+    color: #E98074;
+}
+
+.login-beer-icon {
+    width: 10%;
+    margin-bottom: 30px;
+}
+
+.login-fb-btn {
+    border-radius: 15px;
+    background-color: #3E57B1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    height: 6vh;
+    padding-right: 8.5%;
+}
+
+.login-fb-icon {
+    width: 7.5%;
+}
+
+.login-input {
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: #D8D8D8;
+    color: #E98074;
+    width: 35vw;
+}
+
+.login-submit-btn {
+    background-color: #E85A4F;
+    font-weight: bold;
+    width: 35vw;
+    border-radius: 20px;
+}
+
+.login-controls {
+    text-align: center;
+    margin-top: 30px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -11,7 +12,9 @@ function Sections() {
         <Container fluid className="sections-container">
             <Nav className="sections-content" style={{ width: "100%" }}>    
                 <Button className="beer-btn">
-                    Cervejas
+                    <Link to="/cervejas">
+                        Cervejas
+                    </Link>
                 </Button>
                 <Button className="wine-btn">
                     Vinhos

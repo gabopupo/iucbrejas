@@ -2,21 +2,25 @@
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Sections from './components/Sections';
-import Footer from './components/Footer';
-import Carousel from './components/Carousel';
-import PopularItems from './components/PopularItems';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import BeerCategory from './pages/BeerCategory';
+import Login from './pages/Login';
+import Product from './pages/Product';
+import Checkout from './pages/Checkout';
+
 
 function App() {
   return (
-    <>
-      <Header />
-      <Sections />
-      <Carousel />
-      <PopularItems />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/cervejas" component={BeerCategory} />
+        <Route path="/cerveja-generica" component={Product} />
+        <Route path="/checkout" component={Checkout} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

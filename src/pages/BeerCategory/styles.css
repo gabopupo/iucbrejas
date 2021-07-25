@@ -1,0 +1,17 @@
+.cat-page {
+    background-color: #EAE7DC;
+    color: #E98074;
+}
+
+.cat-page h1 {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 4em;
+}
+
+.cat-grid {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}

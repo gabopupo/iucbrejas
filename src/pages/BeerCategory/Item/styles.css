@@ -1,0 +1,34 @@
+
+.cat-item {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.cat-item .cat-item-pic {
+    background-color: white;
+    border: 1px solid #E85A4F;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+.cat-item .cat-item-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.cat-item .cat-item-title {
+    font-weight: bold;
+    color: #E98074;
+}
+
+.cat-item .cat-item-desc {
+    color: #E98074;
+    margin-top: -20px;
+}
+
+.cat-item .cat-item-price {
+    font-weight: bold;
+    color: #E98074;
+    font-size: 1.2em;
+}
