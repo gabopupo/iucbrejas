@@ -77,7 +77,7 @@
     font-weight: bold;
 }
 
-.checkout-payment-method p .checkout-payment-method-change {
+.checkout-change {
     text-decoration: underline;
     font-weight: normal;
 }
@@ -93,6 +93,21 @@
 }
 
 .checkout-arrival-time p {
+    margin: auto 50px;
+    font-weight: bold;
+}
+
+.checkout-cpf {
+    border-top: 1px solid #E98074;
+    padding: 20px 0;
+    display: flex;
+}
+
+.checkout-cpf img {
+    width: 5%;
+}
+
+.checkout-cpf p {
     margin: auto 50px;
     font-weight: bold;
 }

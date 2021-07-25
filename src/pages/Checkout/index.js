@@ -3,7 +3,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sections from '../../components/Sections';
 import GenericBeer from '../../assets/generic-beer.png';
-import { Button, Form, FormControl } from 'react-bootstrap';
+import { Button, CloseButton, Form, FormControl } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 
 import './styles.css';
@@ -14,6 +14,7 @@ function Checkout({ history }) {
     const discountTicketIcon = require('../../assets/discount-ticket.svg').default;
     const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
     const checkoutIcon = require('../../assets/checkout.svg').default;
+    const idCardIcon = require('../../assets/id-card.svg').default;
   return (
       <>
         <Header />
@@ -51,11 +52,15 @@ function Checkout({ history }) {
             <div className="checkout-secondary-info">
                 <div className="checkout-payment-method">
                     <img src={mastercardIcon} alt="MasterCard" />
-                    <p>MasterCard final 4321 <span className="checkout-payment-method-change">Trocar</span></p>
+                    <p>MasterCard final 4321 <span className="checkout-change">Trocar</span></p>
                 </div>
                 <div className="checkout-arrival-time">
                     <img src={motorcycleIcon} alt="Entrega em motocicleta" />
-                    <p>Chegará em 20 minutos</p>
+                    <p>Chegará em 20 minutos<br />Entrega em Rua Episcopal, 1700 - São Carlos <span className="checkout-change">Trocar</span></p>
+                </div>
+                <div className="checkout-cpf">
+                    <img src={idCardIcon} alt="CPF" />
+                    <p>CPF: 123.456.789-01 <span className="checkout-change">Trocar</span></p>
                 </div>
             </div>
             <div className="checkout-opt-buttons">
