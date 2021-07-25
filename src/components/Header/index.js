@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button, Form, FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './styles.css';
 
-function Header() {
+function Header({history}) {
     const notLoggedIcon = require('../../assets/not-logged.svg').default;
     const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
     const accessibiltyIcon = require('../../assets/accessibility.svg').default;
@@ -18,10 +18,8 @@ function Header() {
                 <Form inline="true" className="navbar-search-bar">
                     <FormControl type="text" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                 </Form>
-                <Button className="navbar-login-btn">
-                    <Link to="/login">
-                        Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
-                    </Link>
+                <Button className="navbar-login-btn" onClick={() => history.push('/login')}>
+                    Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
                 </Button>
                 <Nav.Link href="/checkout"><img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/></Nav.Link>
                 <Nav.Link href="#home"><img className="navbar-accessibility-icon" src={accessibiltyIcon} alt='Acessibilidade'/></Nav.Link>
@@ -32,4 +30,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default withRouter(Header);

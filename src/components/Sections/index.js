@@ -1,20 +1,18 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import './styles.css';
 
-function Sections() {
+function Sections({ history }) {
     const mapPointerIcon = require('../../assets/map-pointer.svg').default;
     const deliveryAddress = 'Rua Episcopal, 1700 - São Carlos';
   return (
     <Navbar className="sections-bar">
         <Container fluid className="sections-container">
             <Nav className="sections-content" style={{ width: "100%" }}>    
-                <Button className="beer-btn">
-                    <Link to="/cervejas">
-                        Cervejas
-                    </Link>
+                <Button className="beer-btn" onClick={() => history.push('/cervejas')}>
+                    Cervejas
                 </Button>
                 <Button className="wine-btn">
                     Vinhos
@@ -36,4 +34,4 @@ function Sections() {
   );
 }
 
-export default Sections;
+export default withRouter(Sections);
