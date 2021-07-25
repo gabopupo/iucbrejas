@@ -4,12 +4,124 @@
     padding: 50px 100px;
 }
 
+.checkout-confirm-product {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-confirm-pic {
+    background-color: white;
+    border: 1px solid #E85A4F;
+    width: 100px;
+    height: 100px;
+}
+
+.checkout-confirm-pic img {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+
+.checkout-confirm-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.checkout-confirm-desc {
+    margin-left: 3vw;
+}
+
+.checkout-confirm-qtd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-confirm-qtd-selector {
+    display: flex;
+}
+
+.checkout-confirm-qtd-selector button {
+    background-color: #E98074;
+    border: 1px solid #E98074;
+    font-weight: bold;
+}
+
+.checkout-confirm-total-val {
+    float: right;
+    margin-top: 20px;
+}
+
+.checkout-confirm-total-val-number {
+    font-size: 1.75em;
+}
+
+.checkout-secondary-info {
+    margin-top: 15vh;
+}
+
+.checkout-payment-method {
+    border-top: 1px solid #E98074;
+    padding: 20px 0;
+    display: flex;
+}
+
+.checkout-payment-method img {
+    width: 5%;
+}
+
+.checkout-payment-method p {
+    margin: auto 50px;
+    font-weight: bold;
+}
+
+.checkout-payment-method p .checkout-payment-method-change {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.checkout-arrival-time {
+    border-top: 1px solid #E98074;
+    padding: 20px 0;
+    display: flex;
+}
+
+.checkout-arrival-time img {
+    width: 5%;
+}
+
+.checkout-arrival-time p {
+    margin: auto 50px;
+    font-weight: bold;
+}
+
+.checkout-opt-buttons {
+    border-top: 1px solid #E98074;
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .checkout-opt-buttons button {
     background-color: #E98074;
     border: 1px solid #E98074;
+    margin-left: 2vw;
+    height: 7vh;
+    width: 15vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.checkout-opt-buttons img {
+    height: 75%;
 }
 
 .checkout-opt-buttons .checkout-opt-primary {
     background-color: #2A7C03;
     border: 1px solid #2A7C03;
+    width: 20vw;
 }

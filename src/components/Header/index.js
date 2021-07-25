@@ -15,7 +15,7 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="justify-content-end"  style={{ width: "100%" }}>
-                <Form inline className="navbar-search-bar">
+                <Form inline="true" className="navbar-search-bar">
                     <FormControl type="text" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                 </Form>
                 <Button className="navbar-login-btn">
