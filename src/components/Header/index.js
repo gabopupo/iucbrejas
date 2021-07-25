@@ -3,7 +3,7 @@ import { Container, Nav, Navbar, Button, Form, FormControl } from 'react-bootstr
 import { Link, withRouter } from 'react-router-dom';
 import './styles.css';
 
-function Header({history}) {
+function Header({history, showIndicator = false}) {
     const notLoggedIcon = require('../../assets/not-logged.svg').default;
     const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
     const accessibiltyIcon = require('../../assets/accessibility.svg').default;
@@ -21,7 +21,10 @@ function Header({history}) {
                 <Button className="navbar-login-btn" onClick={() => history.push('/login')}>
                     Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
                 </Button>
+                <div className='navbar-shopping-cart'>
                 <Nav.Link href="/checkout"><img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/></Nav.Link>
+                {showIndicator && <div className="navbar-shopping-cart-indicator">1</div>}
+                </div>
                 <Nav.Link href="#home"><img className="navbar-accessibility-icon" src={accessibiltyIcon} alt='Acessibilidade'/></Nav.Link>
                 </Nav>
             </Navbar.Collapse>

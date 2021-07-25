@@ -12,10 +12,11 @@ function Product() {
   const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
   const backIcon = require('../../assets/back.svg').default;
   const [qtd, changeQtd] = useState(0);
+  const [showIndicator, setShowIndicator] = useState(false);
 
   return (
       <>
-        <Header />
+        <Header showIndicator={showIndicator} />
         <Sections />
         <div className="product-page">
           <div className="product-back">
@@ -43,7 +44,10 @@ function Product() {
                   <Button onClick={() => changeQtd(qtd+1)}>+</Button>
                 </div>
               </div>
-              <Button className="product-add-to-cart">
+              <Button onClick={() => {
+                  if (qtd === 0) alert('Insira uma quantidade maior que zero!');
+                  else setShowIndicator(true);
+                }} className="product-add-to-cart">
                 <img className="product-add-to-cart-icon" src={shoppingCartIcon} alt="Adicionar ao Carrinho" />
                 Adicionar ao Carrinho
               </Button>

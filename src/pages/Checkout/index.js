@@ -26,7 +26,7 @@ function Checkout({ history }) {
     },[qtd]);
   return (
       <>
-        <Header />
+        <Header showIndicator />
         <Sections />
         {itemOnCart ? 
         <div className="checkout-page">
