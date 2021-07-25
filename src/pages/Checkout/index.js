@@ -4,10 +4,11 @@ import Header from '../../components/Header';
 import Sections from '../../components/Sections';
 import GenericBeer from '../../assets/generic-beer.png';
 import { Button, Form, FormControl } from 'react-bootstrap';
+import { withRouter } from 'react-router';
 
 import './styles.css';
 
-function Checkout() {
+function Checkout({ history }) {
     const mastercardIcon = require('../../assets/mastercard.svg').default;
     const motorcycleIcon = require('../../assets/motorcycle.svg').default;
     const discountTicketIcon = require('../../assets/discount-ticket.svg').default;
@@ -59,7 +60,7 @@ function Checkout() {
             </div>
             <div className="checkout-opt-buttons">
                 <Button><img src={discountTicketIcon} alt="Inserir cupom" /> Inserir cupom</Button>
-                <Button><img src={shoppingCartIcon} alt="Voltar à loja" /> Voltar à loja</Button>
+                <Button onClick={() => history.push('/')}><img src={shoppingCartIcon} alt="Voltar à loja" /> Voltar à loja</Button>
                 <Button className="checkout-opt-primary"><img src={checkoutIcon} alt="Fazer pedido" /> Fazer pedido</Button>
             </div>
         </div>
@@ -68,4 +69,4 @@ function Checkout() {
   );
 }
 
-export default Checkout;
+export default withRouter(Checkout);
