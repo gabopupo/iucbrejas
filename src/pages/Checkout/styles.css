@@ -1,6 +1,6 @@
 .checkout-page {
     background-color: #EAE7DC;
-    color: #E98074;
+    color: #8D2216;
     padding: 50px 100px;
     min-height: 53vh;
 }
@@ -45,8 +45,8 @@
 }
 
 .checkout-confirm-qtd-selector button {
-    background-color: #E98074;
-    border: 1px solid #E98074;
+    background-color: #8D2216;
+    border: 1px solid #8D2216;
     font-weight: bold;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .checkout-payment-method {
-    border-top: 1px solid #E98074;
+    border-top: 1px solid #8D2216;
     padding: 20px 0;
     display: flex;
 }
@@ -89,7 +89,7 @@
 }
 
 .checkout-arrival-time {
-    border-top: 1px solid #E98074;
+    border-top: 1px solid #8D2216;
     padding: 20px 0;
     display: flex;
 }
@@ -104,7 +104,7 @@
 }
 
 .checkout-cpf {
-    border-top: 1px solid #E98074;
+    border-top: 1px solid #8D2216;
     padding: 20px 0;
     display: flex;
 }
@@ -119,15 +119,15 @@
 }
 
 .checkout-opt-buttons {
-    border-top: 1px solid #E98074;
+    border-top: 1px solid #8D2216;
     padding-top: 50px;
     display: flex;
     justify-content: flex-end;
 }
 
 .checkout-opt-buttons button {
-    background-color: #E98074;
-    border: 1px solid #E98074;
+    background-color: #8D2216;
+    border: 1px solid #8D2216;
     margin-left: 2vw;
     height: 7vh;
     width: 15vw;

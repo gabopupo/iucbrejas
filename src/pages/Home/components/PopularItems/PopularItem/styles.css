@@ -2,6 +2,7 @@
 .popular-items .popular-item {
     width: 150px;
     margin: 0 auto;
+    color: #8D2216;
 }
 
 .popular-items .popular-item .popular-item-pic {

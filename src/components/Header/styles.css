@@ -1,9 +1,10 @@
 .navbar {
-  background-color: #E85A4F;
+  background-color: #E22F22;
 }
 
 .navbar a {
   color: white !important;
+  font-weight: bold;
   width: 40px;
   text-decoration: none;
 }
@@ -14,7 +15,7 @@
 }
 
 .navbar .navbar-login-btn {
-  background-color: #E98074;
+  background-color: #8D2216;
   border: 0;
   font-weight: bolder;
   font-size: 1.2em;
@@ -24,7 +25,7 @@
 }
 
 .navbar .navbar-login-btn:hover {
-  background-color: #E98074;
+  background-color: #c56c62;
 }
 
 .navbar .navbar-login-btn .navbar-login-icon {
@@ -96,7 +97,7 @@
 }
 
 .accessibility-modal button {
-  background-color: #E98074;
+  background-color: #8D2216;
   border: 0;
   border-radius: 10px;
   font-size: 0.9em;

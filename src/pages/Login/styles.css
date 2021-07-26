@@ -6,12 +6,12 @@
     height: 110vh;
     padding: 70px 0;
     background-color: #EAE7DC;
-    color: #E98074;
+    color: #8D2216;
 }
 
 .login-page a {
     text-decoration: none;
-    color: #E98074;
+    color: #8D2216;
 }
 
 .login-beer-icon {
@@ -38,15 +38,21 @@
     margin-bottom: 15px;
     border-radius: 20px;
     background-color: #D8D8D8;
-    color: #E98074;
+    color: #8D2216;
     width: 35vw;
 }
 
 .login-submit-btn {
-    background-color: #E85A4F;
+    background-color: #8D2216;
+    border: 1px solid #8D2216;
     font-weight: bold;
     width: 35vw;
     border-radius: 20px;
+}
+
+.login-submit-btn:hover {
+    background-color: #c56c62;
+    border: 1px solid #c56c62;
 }
 
 .login-controls {

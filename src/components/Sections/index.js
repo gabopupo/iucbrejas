@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
+import BrejasContext from '../../BrejasContext';
 
 import './styles.css';
 
 function Sections({ history }) {
     const mapPointerIcon = require('../../assets/map-pointer.svg').default;
-    const deliveryAddress = 'Rua Episcopal, 1700 - São Carlos';
+    const context = useContext(BrejasContext);
+    const deliveryAddress = context.loggedUser ? 'Rua Episcopal, 1700 - São Carlos' : 'Entre para escolher o endereço de entrega!';
   return (
     <Navbar className="sections-bar">
         <Container fluid className="sections-container">

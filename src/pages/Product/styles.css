@@ -6,11 +6,11 @@
 .product-back-btn {
     margin-left: 50px;
     text-decoration: none;
-    color: #E85A4F;
+    color: #8D2216;
 }
 
 .product-back-btn:hover {
-    color: #E85A4F;
+    color: #C7251A;
 }
 
 
@@ -29,7 +29,7 @@
 }
 
 .product-data {
-    color: #E98074;
+    color: #8D2216;
     width: 35vw;
     margin-right: 15vw;
 }
@@ -37,11 +37,17 @@
 .product-data h2 {
     text-transform: uppercase;
     font-weight: bold;
+    color: #C7251A;
+}
+
+.product-data h4 {
+    color: #C7251A;
 }
 
 .product-qtd {
     display: flex;
     align-items: center;
+    color: #C7251A;
 }
 
 .product-qtd-selector {
@@ -50,8 +56,8 @@
 }
 
 .product-qtd-selector button {
-    background-color: #E98074;
-    border: 1px solid #E98074;
+    background-color: #8D2216;
+    border: 1px solid #8D2216;
     font-weight: bold;
 }
 
@@ -67,8 +73,8 @@
 .product-add-to-cart {
     display: flex;
     justify-content: space-around;
-    background-color: #E98074;
-    border: 1px solid #E98074;
+    background-color: #8D2216;
+    border: 1px solid #8D2216;
     margin-top: 40px;
 }
 
