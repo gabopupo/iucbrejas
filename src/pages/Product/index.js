@@ -18,7 +18,8 @@ function Product() {
   const addToCart = () => {
     if (qtd === 0) alert('Insira uma quantidade maior que zero!');
     else {
-      context.setItemsOnCart(qtd);
+      context.setItemsOnCart(context.itemsOnCart + qtd);
+      alert(`Você adicionou ${qtd} unidade(s) de Cerveja Genérica no carrinho!`)
     }
   };
 

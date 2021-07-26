@@ -24,7 +24,7 @@ function Login({ history }) {
         <Sections />
         <div className="login-page">
             <img className="login-beer-icon" src={beerRedIcon} alt="Faça seu login" />
-            <Button className="login-fb-btn">
+            <Button onClick={login} className="login-fb-btn">
                 <img src={facebookIcon} alt="Facebook" className="login-fb-icon" /> Continuar com Facebook
             </Button>
             ou
