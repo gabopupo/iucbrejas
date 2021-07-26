@@ -25,7 +25,7 @@ function App() {
 
   return (
     <BrejasContext.Provider value={contextElems}>
-      <BrowserRouter history={history}>
+      <BrowserRouter basename="/iucbrejas" history={history}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/login" component={Login} />

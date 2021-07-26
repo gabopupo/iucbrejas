@@ -1,4 +1,7 @@
 # Brejas.com
+## Para acessar...
+https://gslvrp.github.io/iucbrejas/
+
 ## Para executar...
 ```yarn && yarn start```
 
