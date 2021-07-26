@@ -28,7 +28,7 @@ function Header({history}) {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-end"  style={{ width: "100%" }}>
                     <Form inline="true" className="navbar-search-bar">
-                        <FormControl type="text" placeholder="Faça sua pesquisa" className="mr-sm-2" />
+                        <FormControl type="text" title="Pesquisar" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                     </Form>
                     {context.loggedUser ? 
                         <div className="navbar-logged-user" onClick={() => {context.setLoggedUser(false)}}>

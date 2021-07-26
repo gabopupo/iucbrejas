@@ -68,7 +68,7 @@ function Checkout({ history }) {
                     <div className="checkout-confirm-qtd-selector">
                         <Button onClick={decreaseQtd}>-</Button>
                         <Form>
-                            <FormControl type="text" value={context.itemsOnCart} readOnly className="mr-sm-2 product-qtd-selector-input" />
+                            <FormControl title="Quantidade" type="text" value={context.itemsOnCart} readOnly className="mr-sm-2 product-qtd-selector-input" />
                         </Form>
                         <Button onClick={increaseQtd}>+</Button>
                     </div>

@@ -48,7 +48,7 @@ function Product() {
                 <div className="product-qtd-selector">
                   <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
                   <Form>
-                    <FormControl type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
+                    <FormControl title="Quantidade" type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
                   </Form>
                   <Button onClick={() => changeQtd(qtd+1)}>+</Button>
                 </div>

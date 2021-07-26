@@ -29,8 +29,8 @@ function Login({ history }) {
             </Button>
             ou
             <Form>
-                <FormControl type="text" placeholder="Email" className="mr-sm-2 login-input" />
-                <FormControl type="password" placeholder="Senha" className="mr-sm-2 login-input" />
+                <FormControl title="Login" type="text" placeholder="Email" className="mr-sm-2 login-input" />
+                <FormControl title="Senha" type="password" placeholder="Senha" className="mr-sm-2 login-input" />
 
                 <Button className="login-submit-btn" onClick={login}>ENTRAR</Button>
             </Form>
