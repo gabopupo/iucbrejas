@@ -104,6 +104,10 @@
   color: #EAE7DC;
 }
 
+.accessibility-modal button:hover {
+  background-color: #c56c62;
+}
+
 .accessibility-modal .font-size-controllers {
   margin: 0 auto;
   width: 50%;
@@ -112,5 +116,9 @@
 }
 
 .accessibility-modal .accessibilty-modal-close {
+  background-color: initial;
+}
+
+.accessibility-modal .accessibilty-modal-close:hover {
   background-color: initial;
 }

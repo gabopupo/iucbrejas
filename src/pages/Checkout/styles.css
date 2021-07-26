@@ -50,6 +50,11 @@
     font-weight: bold;
 }
 
+.checkout-confirm-qtd-selector button:hover {
+    background-color: #c56c62;
+    border: 1px solid #c56c62;
+}
+
 .checkout-confirm-total-val {
     float: right;
     margin-top: 20px;
@@ -132,6 +137,11 @@
     align-items: center;
 }
 
+.checkout-opt-buttons button:hover {
+    background-color: #c56c62;
+    border: 1px solid #c56c62;
+}
+
 .checkout-opt-buttons img {
     height: 75%;
 }
@@ -140,4 +150,9 @@
     background-color: #2A7C03;
     border: 1px solid #2A7C03;
     width: 20vw;
+}
+
+.checkout-opt-buttons .checkout-opt-primary:hover {
+    background-color: #1b5302;
+    border: 1px solid #1b5302;
 }
