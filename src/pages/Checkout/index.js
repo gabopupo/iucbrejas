@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sections from '../../components/Sections';
@@ -7,6 +7,7 @@ import { Button, Form, FormControl } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 
 import './styles.css';
+import BrejasContext from '../../BrejasContext';
 
 function Checkout({ history }) {
     const mastercardIcon = require('../../assets/mastercard.svg').default;
@@ -16,19 +17,36 @@ function Checkout({ history }) {
     const checkoutIcon = require('../../assets/checkout.svg').default;
     const idCardIcon = require('../../assets/id-card.svg').default;
 
-    const [qtd,changeQtd] = useState(3);
-    const [itemOnCart, setItemOnCart] = useState(true);
-    useEffect(() => { 
-        if (qtd === 0)
-            if(window.confirm('Você deseja remover o produto \'Cerveja Genérica\' do carrinho?'))
-                setItemOnCart(false);
-            else changeQtd(1);
-    },[qtd]);
+    const context = useContext(BrejasContext);
+
+    const round = num => Math.round( ( num + Number.EPSILON ) * 100 ) / 100;
+
+    const decreaseQtd = () => {
+        if (context.itemsOnCart - 1 === 0) {
+            if(window.confirm('Você deseja remover o produto \'Cerveja Genérica\' do carrinho?')) {
+                context.setItemsOnCart(context.itemsOnCart - 1);
+            }
+        } else {
+            context.setItemsOnCart(context.itemsOnCart - 1);
+            setTotalPrice(round(totalPrice - unitPrice));
+        }
+    }
+
+    const increaseQtd = () => {
+        context.setItemsOnCart(context.itemsOnCart+1);
+        setTotalPrice(round(totalPrice + unitPrice));
+    }
+
+    const unitPrice = 1.99;
+    const [totalPrice, setTotalPrice] = useState(unitPrice);
+
+    useEffect(() => setTotalPrice(round(unitPrice * context.itemsOnCart)), [context.itemsOnCart]);
+
   return (
       <>
-        <Header showIndicator />
+        <Header />
         <Sections />
-        {itemOnCart ? 
+        {context.itemsOnCart > 0 ? 
         <div className="checkout-page">
             <h2>Confirme a sua compra</h2>
             <div className="checkout-confirm-info">
@@ -43,21 +61,21 @@ function Checkout({ history }) {
                 </div>
                 <div className="checkout-confirm-unit-val">
                     <h3>Valor unit</h3>
-                    <h3>R$ 1.99</h3>
+                    <h3>R${unitPrice}</h3>
                 </div>
                 <div className="checkout-confirm-qtd">
                     <h3>Quantidade</h3>
                     <div className="checkout-confirm-qtd-selector">
-                        <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
+                        <Button onClick={decreaseQtd}>-</Button>
                         <Form>
-                            <FormControl type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
+                            <FormControl type="text" value={context.itemsOnCart} readOnly className="mr-sm-2 product-qtd-selector-input" />
                         </Form>
-                        <Button onClick={() => changeQtd(qtd+1)}>+</Button>
+                        <Button onClick={increaseQtd}>+</Button>
                     </div>
                 </div>
             </div>
             <div className="checkout-confirm-total-val">
-                Valor total: <span className="checkout-confirm-total-val-number">R$11.94</span>
+                Valor total: <span className="checkout-confirm-total-val-number">R${totalPrice}</span>
             </div>
             <div className="checkout-secondary-info">
                 <div className="checkout-payment-method">

@@ -10,7 +10,7 @@
 
 .navbar .navbar-search-bar {
   margin: 0 auto;
-  width: 30vw;
+  width: 40vw;
 }
 
 .navbar .navbar-login-btn {
@@ -30,6 +30,26 @@
 .navbar .navbar-login-btn .navbar-login-icon {
   width: 25%;
   margin-left: 10px;
+}
+
+.navbar .navbar-logged-user {
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 4px;
+}
+
+.navbar .navbar-logged-user .navbar-logged-user-avatar {
+  width: 35px;
+}
+
+.navbar .navbar-logged-user .navbar-logged-user-dropdown {
+  width: 10px;
+  margin-left: 5px;
 }
 
 .navbar .navbar-shopping-cart {

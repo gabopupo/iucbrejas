@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Sections from '../../components/Sections';
@@ -7,16 +7,24 @@ import './styles.css';
 import GenericBeer from '../../assets/generic-beer.png';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import BrejasContext from '../../BrejasContext';
 
 function Product() {
   const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
   const backIcon = require('../../assets/back.svg').default;
   const [qtd, changeQtd] = useState(0);
-  const [showIndicator, setShowIndicator] = useState(false);
+
+  const context = useContext(BrejasContext);
+  const addToCart = () => {
+    if (qtd === 0) alert('Insira uma quantidade maior que zero!');
+    else {
+      context.setItemsOnCart(qtd);
+    }
+  };
 
   return (
       <>
-        <Header showIndicator={showIndicator} />
+        <Header />
         <Sections />
         <div className="product-page">
           <div className="product-back">
@@ -44,10 +52,7 @@ function Product() {
                   <Button onClick={() => changeQtd(qtd+1)}>+</Button>
                 </div>
               </div>
-              <Button onClick={() => {
-                  if (qtd === 0) alert('Insira uma quantidade maior que zero!');
-                  else setShowIndicator(true);
-                }} className="product-add-to-cart">
+              <Button onClick={addToCart} className="product-add-to-cart">
                 <img className="product-add-to-cart-icon" src={shoppingCartIcon} alt="Adicionar ao Carrinho" />
                 Adicionar ao Carrinho
               </Button>
