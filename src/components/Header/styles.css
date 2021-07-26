@@ -75,3 +75,42 @@
 .navbar .navbar-accessibility-icon {
   width: 115%;
 }
+
+.accessibility-modal {
+  z-index: 2;
+  background-color: #EAE7DC;
+  border-radius: 20px;
+  height: 150px;
+  width: 200px;
+  border: 0;
+  position: absolute;
+  left: 70vw;
+  top: 2vh;
+}
+
+.accessibility-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.accessibility-modal button {
+  background-color: #E98074;
+  border: 0;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #EAE7DC;
+}
+
+.accessibility-modal .font-size-controllers {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accessibility-modal .accessibilty-modal-close {
+  background-color: initial;
+}
