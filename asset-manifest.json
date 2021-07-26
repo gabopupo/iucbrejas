@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/iucbrejas/static/css/main.dbc9323a.chunk.css",
+    "main.js": "/iucbrejas/static/js/main.3b48e829.chunk.js",
+    "main.js.map": "/iucbrejas/static/js/main.3b48e829.chunk.js.map",
+    "runtime-main.js": "/iucbrejas/static/js/runtime-main.9bd38f07.js",
+    "runtime-main.js.map": "/iucbrejas/static/js/runtime-main.9bd38f07.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/iucbrejas/static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.29db2b19.chunk.js": "/iucbrejas/static/js/2.29db2b19.chunk.js",
+    "static/js/2.29db2b19.chunk.js.map": "/iucbrejas/static/js/2.29db2b19.chunk.js.map",
+    "index.html": "/iucbrejas/index.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/iucbrejas/static/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.dbc9323a.chunk.css.map": "/iucbrejas/static/css/main.dbc9323a.chunk.css.map",
+    "static/js/2.29db2b19.chunk.js.LICENSE.txt": "/iucbrejas/static/js/2.29db2b19.chunk.js.LICENSE.txt",
+    "static/media/accessibility.svg": "/iucbrejas/static/media/accessibility.043a16b2.svg",
+    "static/media/avatar.7c8409f3.png": "/iucbrejas/static/media/avatar.7c8409f3.png",
+    "static/media/back.svg": "/iucbrejas/static/media/back.dd2c13d3.svg",
+    "static/media/beer-red.svg": "/iucbrejas/static/media/beer-red.9a74a353.svg",
+    "static/media/styles.css": "/iucbrejas/static/media/wine.3fa5503f.svg",
+    "static/media/checkout.svg": "/iucbrejas/static/media/checkout.81160ec1.svg",
+    "static/media/discount-ticket.svg": "/iucbrejas/static/media/discount-ticket.8bf3f894.svg",
+    "static/media/dropdown.svg": "/iucbrejas/static/media/dropdown.78d8b99c.svg",
+    "static/media/fb.svg": "/iucbrejas/static/media/fb.2fb5a1b1.svg",
+    "static/media/generic-beer.25361495.png": "/iucbrejas/static/media/generic-beer.25361495.png",
+    "static/media/id-card.svg": "/iucbrejas/static/media/id-card.fa47967d.svg",
+    "static/media/insta.svg": "/iucbrejas/static/media/insta.faa145d5.svg",
+    "static/media/map-pointer.svg": "/iucbrejas/static/media/map-pointer.5ded2491.svg",
+    "static/media/mastercard.svg": "/iucbrejas/static/media/mastercard.7974e183.svg",
+    "static/media/motorcycle.svg": "/iucbrejas/static/media/motorcycle.1c417dee.svg",
+    "static/media/not-logged.svg": "/iucbrejas/static/media/not-logged.58f37bc8.svg",
+    "static/media/shopping-cart.svg": "/iucbrejas/static/media/shopping-cart.f0399d5c.svg",
+    "static/media/twitter.svg": "/iucbrejas/static/media/twitter.de68c7d1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bd38f07.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.29db2b19.chunk.js",
+    "static/css/main.dbc9323a.chunk.css",
+    "static/js/main.3b48e829.chunk.js"
+  ]
+}
