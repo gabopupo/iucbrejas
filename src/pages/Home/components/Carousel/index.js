@@ -4,7 +4,7 @@ import './styles.css';
 
 function Carousel() {
   return (
-      <div className="carousel" />
+      <div role="img" className="carousel" aria-label="10% de desconto na sua primeira compra de cervejas"/>
   );
 }
 

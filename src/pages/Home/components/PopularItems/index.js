@@ -5,7 +5,7 @@ import './styles.css';
 
 function PopularItems() {
   return (
-      <div className="popular-items">
+      <div role="main" className="popular-items">
           <h2>Populares no Brejas.com</h2>
           <div className="popular-items-table">
             <PopularItem />

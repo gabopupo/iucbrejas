@@ -47,51 +47,53 @@ function Checkout({ history }) {
         <Header />
         <Sections />
         {context.itemsOnCart > 0 ? 
-        <div className="checkout-page">
+        <div className="checkout-page" role="main">
             <h2>Confirme a sua compra</h2>
-            <div className="checkout-confirm-info">
-                <div className="checkout-confirm-product">
-                    <div className="checkout-confirm-pic">
-                        <img src={GenericBeer} alt='Item' />
+            <div role="region" aria-label="Dados da compra">
+                <div className="checkout-confirm-info">
+                    <div className="checkout-confirm-product">
+                        <div className="checkout-confirm-pic">
+                            <img src={GenericBeer} alt='Item' />
+                        </div>
+                        <div className="checkout-confirm-desc">
+                            <h3>Cerveja Genérica 300ml</h3>
+                            <p>Cód. Barras: 0xxxxxxxxxxxxx</p>
+                        </div>
                     </div>
-                    <div className="checkout-confirm-desc">
-                        <h3>Cerveja Genérica 300ml</h3>
-                        <p>Cód. Barras: 0xxxxxxxxxxxxx</p>
+                    <div className="checkout-confirm-unit-val">
+                        <h3>Valor unit</h3>
+                        <h3>R${unitPrice}</h3>
+                    </div>
+                    <div className="checkout-confirm-qtd">
+                        <h3>Quantidade</h3>
+                        <div className="checkout-confirm-qtd-selector">
+                            <Button onClick={decreaseQtd}>-</Button>
+                            <Form>
+                                <FormControl title="Quantidade" type="text" value={context.itemsOnCart} readOnly className="mr-sm-2 product-qtd-selector-input" />
+                            </Form>
+                            <Button onClick={increaseQtd}>+</Button>
+                        </div>
                     </div>
                 </div>
-                <div className="checkout-confirm-unit-val">
-                    <h3>Valor unit</h3>
-                    <h3>R${unitPrice}</h3>
+                <div className="checkout-confirm-total-val">
+                    Valor total: <span className="checkout-confirm-total-val-number">R${totalPrice}</span>
                 </div>
-                <div className="checkout-confirm-qtd">
-                    <h3>Quantidade</h3>
-                    <div className="checkout-confirm-qtd-selector">
-                        <Button onClick={decreaseQtd}>-</Button>
-                        <Form>
-                            <FormControl title="Quantidade" type="text" value={context.itemsOnCart} readOnly className="mr-sm-2 product-qtd-selector-input" />
-                        </Form>
-                        <Button onClick={increaseQtd}>+</Button>
-                    </div>
-                </div>
-            </div>
-            <div className="checkout-confirm-total-val">
-                Valor total: <span className="checkout-confirm-total-val-number">R${totalPrice}</span>
             </div>
             <div className="checkout-secondary-info">
-                <div className="checkout-payment-method">
+                <div className="checkout-payment-method" role="region" aria-label="Método de pagamento">
                     <img src={mastercardIcon} alt="MasterCard" />
                     <p>MasterCard final 4321 <span className="checkout-change">Trocar</span></p>
                 </div>
-                <div className="checkout-arrival-time">
+                <div className="checkout-arrival-time" role="region" aria-label="Dados da entrega">
                     <img src={motorcycleIcon} alt="Entrega em motocicleta" />
                     <p>Chegará em 20 minutos<br />Entrega em Rua Episcopal, 1700 - São Carlos <span className="checkout-change">Trocar</span></p>
                 </div>
-                <div className="checkout-cpf">
+                <div className="checkout-cpf" role="region" aria-label="CPF do cliente">
                     <img src={idCardIcon} alt="CPF" />
                     <p>CPF: 123.456.789-01 <span className="checkout-change">Trocar</span></p>
                 </div>
             </div>
-            <div className="checkout-opt-buttons">
+            <div className="checkout-opt-buttons" role="region" aria-label="Opções de checkout">
                 <Button><img src={discountTicketIcon} alt="Inserir cupom" /> Inserir cupom</Button>
                 <Button onClick={() => history.push('/')}><img src={shoppingCartIcon} alt="Voltar à loja" /> Voltar à loja</Button>
                 <Button className="checkout-opt-primary"><img src={checkoutIcon} alt="Fazer pedido" /> Fazer pedido</Button>

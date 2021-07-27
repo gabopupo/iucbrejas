@@ -8,7 +8,7 @@ function Footer() {
   const twitterIcon = require('../../assets/twitter.svg').default;
 
   return (
-      <div className='footer'>
+      <div className='footer' role='contentinfo'>
           <div className="footer-row footer-primary">
             <a href="#home">Início</a>
             <a href="#home">Sobre nós</a>

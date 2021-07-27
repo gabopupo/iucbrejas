@@ -11,7 +11,7 @@ function BeerCategory() {
       <>
       <Header />
       <Sections />
-      <div className="cat-page">
+      <div role="main" className="cat-page">
         <h1>CERVEJAS</h1>
         <div className="cat-grid">
           <Item />

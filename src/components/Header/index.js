@@ -21,14 +21,14 @@ function Header({history}) {
 
     return (
         <>
-            <Navbar>
+            <Navbar role="navigation" aria-label="Primary">
                 <Container>
                 <Navbar.Brand><Link to="/">Brejas.com</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-end"  style={{ width: "100%" }}>
                     <Form inline="true" className="navbar-search-bar">
-                        <FormControl type="text" title="Pesquisar" placeholder="Faça sua pesquisa" className="mr-sm-2" />
+                        <FormControl role="search" type="text" title="Pesquisar" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                     </Form>
                     {context.loggedUser ? 
                         <div className="navbar-logged-user" onClick={() => {context.setLoggedUser(false)}}>

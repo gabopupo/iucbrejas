@@ -10,19 +10,19 @@ function Sections({ history }) {
     const context = useContext(BrejasContext);
     const deliveryAddress = context.loggedUser ? 'Rua Episcopal, 1700 - São Carlos' : 'Entre para escolher o endereço de entrega!';
   return (
-    <Navbar className="sections-bar">
+    <Navbar role="navigation" className="sections-bar" aria-label="Secondary">
         <Container fluid className="sections-container">
             <Nav className="sections-content" style={{ width: "100%" }}>    
-                <Button className="beer-btn" onClick={() => history.push('/cervejas')}>
+                <Button role="region" aria-label="Cervejas" className="beer-btn" onClick={() => history.push('/cervejas')}>
                     Cervejas
                 </Button>
-                <Button className="wine-btn">
+                <Button role="region" aria-label="Vinhos" className="wine-btn">
                     Vinhos
                 </Button>
-                <Button className="distilled-btn">
+                <Button role="region" aria-label="Destilados" className="distilled-btn">
                     Destilados
                 </Button>
-                <Nav.Item className="address-data">
+                <Nav.Item role="region" aria-label="Endereço de entrega" className="address-data">
                     <div className="address-data-text">
                         <strong>Quero receber em...</strong><br />
                         {deliveryAddress}

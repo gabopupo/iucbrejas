@@ -22,21 +22,23 @@ function Login({ history }) {
       <>
         <Header />
         <Sections />
-        <div className="login-page">
+        <div role="main" className="login-page">
             <img className="login-beer-icon" src={beerRedIcon} alt="Faça seu login" />
-            <Button onClick={login} className="login-fb-btn">
+            <Button role="region" aria-label="Entrar com Facebook" onClick={login} className="login-fb-btn">
                 <img src={facebookIcon} alt="Facebook" className="login-fb-icon" /> Continuar com Facebook
             </Button>
             ou
-            <Form>
-                <FormControl title="Login" type="text" placeholder="Email" className="mr-sm-2 login-input" />
-                <FormControl title="Senha" type="password" placeholder="Senha" className="mr-sm-2 login-input" />
+            <div role="region" aria-label="Entrar com email">
+                <Form>
+                    <FormControl title="Login" type="text" placeholder="Email" className="mr-sm-2 login-input" />
+                    <FormControl title="Senha" type="password" placeholder="Senha" className="mr-sm-2 login-input" />
 
-                <Button className="login-submit-btn" onClick={login}>ENTRAR</Button>
-            </Form>
-            <div className="login-controls">
-                <Link to="/"><strong>Esqueci a Senha</strong></Link><br />
-                <span>Ainda não possui uma conta? <Link to="/"><strong>Crie uma conta</strong></Link></span>
+                    <Button className="login-submit-btn" onClick={login}>ENTRAR</Button>
+                </Form>
+                <div className="login-controls">
+                    <Link to="/"><strong>Esqueci a Senha</strong></Link><br />
+                    <span>Ainda não possui uma conta? <Link to="/"><strong>Crie uma conta</strong></Link></span>
+                </div>
             </div>
         </div>
         <Footer />

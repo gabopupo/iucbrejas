@@ -27,7 +27,7 @@ function Product() {
       <>
         <Header />
         <Sections />
-        <div className="product-page">
+        <div role="main" className="product-page">
           <div className="product-back">
             <Link className="product-back-btn" to="/">
               <img className="product-back-icon" src={backIcon} alt="Voltar" /> Voltar
@@ -38,19 +38,21 @@ function Product() {
                 <img src={GenericBeer} alt='Item' />
             </div>
             <div className="product-data">
-              <h2>Cerveja Genérica</h2>
-              <h4>R$ 1,99</h4>
-              
-              <p>★★★★☆</p>
-              <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at hendrerit quam, eget lacinia dolor.</p>
-              <div className="product-qtd">
-                <p><strong>Quantidade: </strong></p>
-                <div className="product-qtd-selector">
-                  <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
-                  <Form>
-                    <FormControl title="Quantidade" type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
-                  </Form>
-                  <Button onClick={() => changeQtd(qtd+1)}>+</Button>
+              <div role="region" aria-label="Dados do produto">
+                <h2>Cerveja Genérica</h2>
+                <h4>R$ 1,99</h4>
+                
+                <p>★★★★☆</p>
+                <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at hendrerit quam, eget lacinia dolor.</p>
+                <div className="product-qtd">
+                  <p><strong>Quantidade: </strong></p>
+                  <div className="product-qtd-selector">
+                    <Button onClick={() => changeQtd(qtd-1 < 0 ? qtd:qtd-1)}>-</Button>
+                    <Form>
+                      <FormControl title="Quantidade" type="text" value={qtd} readOnly className="mr-sm-2 product-qtd-selector-input" />
+                    </Form>
+                    <Button onClick={() => changeQtd(qtd+1)}>+</Button>
+                  </div>
                 </div>
               </div>
               <Button onClick={addToCart} className="product-add-to-cart">
