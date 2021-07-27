@@ -6,7 +6,7 @@ import './styles.css';
 
 import Avatar from '../../assets/avatar.png';
 
-function Header({history}) {
+function Header({location, history}) {
     const notLoggedIcon = require('../../assets/not-logged.svg').default;
     const shoppingCartIcon = require('../../assets/shopping-cart.svg').default;
     const accessibiltyIcon = require('../../assets/accessibility.svg').default;
@@ -17,6 +17,12 @@ function Header({history}) {
     const validateLoggedUser = () => {
         if (context.loggedUser) history.push('/checkout');
         else history.push('/login');
+    }
+
+    const handleLogOut = () => {
+        context.setLoggedUser(false);
+        if (location.pathname === '/checkout')
+            history.push('/login');
     }
 
     return (
@@ -31,7 +37,7 @@ function Header({history}) {
                         <FormControl role="search" type="text" title="Pesquisar" placeholder="Faça sua pesquisa" className="mr-sm-2" />
                     </Form>
                     {context.loggedUser ? 
-                        <div className="navbar-logged-user" onClick={() => {context.setLoggedUser(false)}}>
+                        <div className="navbar-logged-user" onClick={handleLogOut}>
                             <img className="navbar-logged-user-avatar" src={Avatar} alt="Avatar" />
                             <div>
                                 João
