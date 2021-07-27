@@ -14,3 +14,4 @@ https://gslvrp.github.io/iucbrejas/
 1. Clicar no carrinho na navbar (/checkout)
 1. Aumenta ou diminui quantidade clicando nos botões de Mais e Menos, clicar no Menos quando quantidade = 1 remove o produto do carrinho
 1. Clicar no botão Voltar à loja para voltar para a página inicial (/)
+1. Clicar no usuário logado na navbar, realiza o log out
