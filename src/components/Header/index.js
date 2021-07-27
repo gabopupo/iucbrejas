@@ -60,7 +60,7 @@ function Header({location, history}) {
             </Navbar>
             <dialog open={modalOpen} className="accessibility-modal">
                 <div className="accessibility-modal-content">
-                    <Button>Ativar auto contraste</Button>
+                    <Button>Ativar alto contraste</Button>
                     <div className="font-size-controllers">
                         <Button>a</Button>
                         <Button>A</Button>
