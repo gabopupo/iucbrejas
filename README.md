@@ -1,4 +1,4 @@
-# Brejas.com
+# Brejas.com - Grupo 02
 ## Para acessar...
 https://gslvrp.github.io/iucbrejas/
 
