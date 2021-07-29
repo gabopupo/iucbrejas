@@ -14,11 +14,6 @@ function Header({location, history}) {
     const context = useContext(BrejasContext);
     const [modalOpen, setModalOpen] = useState(false);
 
-    const validateLoggedUser = () => {
-        if (context.loggedUser) history.push('/checkout');
-        else history.push('/login');
-    }
-
     const handleLogOut = () => {
         context.setLoggedUser(false);
         if (location.pathname === '/checkout')
@@ -45,12 +40,18 @@ function Header({location, history}) {
                             </div>
                         </div>
                         :
-                        <Button className="navbar-login-btn" onClick={() => history.push('/login')}>
-                            Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
+                        <Button className="navbar-login-btn">
+                            <Link to="/login">
+                                Entrar<img className="navbar-login-icon" src={notLoggedIcon} alt='Não logado'/>
+                            </Link>
                         </Button>
                     }
                     <div className='navbar-shopping-cart'>
-                    <Nav.Link onClick={validateLoggedUser}><img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/></Nav.Link>
+                    <Nav.Link>
+                        <Link to='/checkout'>
+                            <img className="navbar-shopping-cart-icon" src={shoppingCartIcon} alt='Carrinho'/>
+                        </Link>
+                    </Nav.Link>
                     {context.itemsOnCart > 0 && <div className="navbar-shopping-cart-indicator">1</div>}
                     </div>
                     <Nav.Link onClick={() => setModalOpen(true)}><img className="navbar-accessibility-icon" src={accessibiltyIcon} alt='Acessibilidade'/></Nav.Link>

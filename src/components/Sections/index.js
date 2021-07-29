@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import BrejasContext from '../../BrejasContext';
 
 import './styles.css';
@@ -13,8 +13,10 @@ function Sections({ history }) {
     <Navbar role="navigation" className="sections-bar" aria-label="Secondary">
         <Container fluid className="sections-container">
             <Nav className="sections-content" style={{ width: "100%" }}>    
-                <Button role="region" aria-label="Cervejas" className="beer-btn" onClick={() => history.push('/cervejas')}>
+                <Button role="region" aria-label="Cervejas" className="beer-btn">
+                    <Link to="/cervejas">
                     Cervejas
+                    </Link>
                 </Button>
                 <Button role="region" aria-label="Vinhos" className="wine-btn">
                     Vinhos

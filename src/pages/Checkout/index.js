@@ -41,6 +41,7 @@ function Checkout({ history }) {
     const [totalPrice, setTotalPrice] = useState(unitPrice);
 
     useEffect(() => setTotalPrice(round(unitPrice * context.itemsOnCart)), [context.itemsOnCart]);
+    useEffect(() => { if (!context.loggedUser) history.push('/login'); }, [context.loggedUser, history])
 
   return (
       <>
